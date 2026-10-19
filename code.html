@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="he"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed": "#001f26", "error": "#ffb4ab", "on-primary-fixed-variant": "#004e5c", "secondary": "#4edea3", "background": "#0f131d", "on-tertiary-fixed-variant": "#004c69", "on-secondary-container": "#00311f", "on-primary-container": "#00424f", "secondary-container": "#00a572", "surface-dim": "#0f131d", "surface-container-highest": "#313540", "surface-container-lowest": "#0a0e18", "secondary-fixed-dim": "#4edea3", "on-error-container": "#ffdad6", "on-error": "#690005", "outline-variant": "#3d494c", "outline": "#869397", "inverse-on-surface": "#2c303b", "on-primary": "#003640", "on-surface": "#dfe2f1", "surface-container-low": "#171b26", "tertiary": "#7bd0ff", "primary-container": "#06b6d4", "on-tertiary-container": "#00415a", "primary-fixed": "#acedff", "on-secondary-fixed-variant": "#005236", "tertiary-fixed": "#c4e7ff", "surface-bright": "#353944", "on-tertiary": "#00354a", "inverse-primary": "#00687a", "surface-container": "#1c1f2a", "on-background": "#dfe2f1", "error-container": "#93000a", "on-surface-variant": "#bcc9cd", "surface-variant": "#313540", "tertiary-fixed-dim": "#7bd0ff", "inverse-surface": "#dfe2f1", "surface-tint": "#4cd7f6", "tertiary-container": "#23b2ec", "surface": "#0f131d", "surface-container-high": "#262a35", "primary-fixed-dim": "#4cd7f6", "on-secondary-fixed": "#002113", "on-secondary": "#003824", "secondary-fixed": "#6ffbbe", "on-tertiary-fixed": "#001e2c", "primary": "#4cd7f6" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-md": "0.75rem", "gutter-lg": "1.5rem", "margin-lg": "2rem", "space-2xl": "2rem", "margin": "1rem", "gutter": "1rem", "space-xl": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-lg": "1rem", "space-3xl": "3rem", "margin-md": "1.5rem", "space-2xs": "0.125rem" }, fontFamily: { "label-md": ["JetBrains Mono"], "metric-display-mobile": ["Inter"], "headline-lg-mobile": ["Inter"], "metric-sub": ["JetBrains Mono"], "metric-display": ["Inter"], "headline-xl": ["Inter"], "headline-sm": ["Inter"], "headline-xl-mobile": ["Inter"], "label-sm": ["JetBrains Mono"], "headline-lg": ["Inter"], "body-sm": ["Inter"], "headline-md": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"] }, fontSize: { "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }], "metric-display-mobile": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "metric-sub": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "metric-display": ["44px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-sm": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "headline-xl-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_16px_rgba(0,0,0,0.5)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><button aria-label="פתח תפריט ראשי" class="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-headline-md">menu</span></button><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-extrabold">DIMENSIONS</span><span class="font-label-sm text-label-sm bg-primary/10 text-primary px-space-xs py-space-2xs rounded-full font-bold">+3CX</span></div><span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-space-2xs"><span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary shadow-[0_0_6px_rgba(78,222,163,0.8)]"></span>שותף מוסמך 3CX | Integration Overview</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="בחירת שפה" class="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md"><span class="material-symbols-outlined text-headline-sm">language</span></button><a aria-label="התקשר לתמיכה ומכירות" class="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg bg-surface-container text-primary hover:bg-surface-container-high transition-colors" href="tel:*3CX"><span class="material-symbols-outlined text-headline-sm">phone_in_talk</span></a><div class="relative flex items-center justify-center pr-space-2xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeOMkKvQ7QWVVkrMtpBVRyCjHHV2nD-pdWbcwl97RVV6xVSwK77JTff2HLFkCwXnnQ8PPh5MPyuXf8zn_SrTyoUNRsYqGcUmGqfCt-bIyZJk2cK5LD7H1Pd3ubEGuHjwAkFT3Xc9bvIr3QeazUEABYR0E9hwuUJoP7XJ8SeJsJ4-MgqG8XAgZwCfSL-cI-aY5gw-7qetPOz76uiEMLuGtAVEyTVm_IiZw0GFRa9i58LbvaffQzki79kw"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-28 bg-surface"><div class="flex flex-col w-full text-on-surface">
+<!-- HERO SECTION -->
+<section class="relative px-margin pt-space-xl pb-space-2xl overflow-hidden flex flex-col gap-space-lg">
+<!-- Ambient glowing backdrop effect -->
+<div class="absolute -top-24 -right-20 w-72 h-72 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+<div class="absolute top-48 -left-20 w-80 h-80 rounded-full bg-secondary/10 blur-3xl pointer-events-none"></div>
+<!-- Official Badge -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high w-fit shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(78,222,163,0.9)] animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary tracking-wide">הרחבת יכולות 3CX רשמית | Dimensions Technologies</span>
+</div>
+<!-- Headline and Subheadline -->
+<div class="flex flex-col gap-space-sm">
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface font-black leading-tight">
+        מעצימים את מרכזיית <span class="text-primary tracking-tight">3CX</span> לרמת ביצועים ותובנות שטרם הכרתם
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        פתרון תקשורת טלפונית חכם המחבר את 3CX לדשבורדים חיים בזמן אמת, ניתוח שיחות מתקדם, לוחות מנהלים (Wallboards) ובינה מלאכותית מותאמת למוקדי שירות ומכירות תובעניים.
+      </p>
+</div>
+<!-- Quick Action CTAs -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<a class="w-full flex items-center justify-center gap-space-sm py-space-md px-space-lg bg-primary-container text-on-primary-fixed rounded-xl font-headline-sm text-headline-sm font-bold shadow-[0_0_20px_rgba(6,182,212,0.35)] active:scale-95 transition-transform text-center" href="#demo-modal">
+<span class="material-symbols-outlined text-headline-sm">calendar_month</span>
+<span>תיאום שיחת הדגמה חיה</span>
+</a>
+<a class="w-full flex items-center justify-center gap-space-sm py-space-md px-space-lg bg-surface-container-high text-on-surface rounded-xl font-headline-sm text-headline-sm font-medium hover:bg-surface-container-highest transition-colors text-center" href="#modules-section">
+<span class="material-symbols-outlined text-headline-sm">hub</span>
+<span>צפייה במודולים ומאפיינים</span>
+</a>
+</div>
+<!-- Live Telemetry Stats Ticker (Bento 2x2) -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-sm">
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-2xs shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">CHANNEL FOCUS</span>
+<span class="material-symbols-outlined text-primary text-metric-sub">verified</span>
+</div>
+<span class="font-metric-display-mobile text-metric-display-mobile text-primary font-extrabold tracking-tight">100%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">בלעדי לערוצי הפצה</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-2xs shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">LATENCY</span>
+<span class="material-symbols-outlined text-secondary text-metric-sub">bolt</span>
+</div>
+<span class="font-metric-display-mobile text-metric-display-mobile text-secondary font-extrabold tracking-tight">0.2s</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">סנכרון Live מול 3CX</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-2xs shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">BRANDING</span>
+<span class="material-symbols-outlined text-tertiary text-metric-sub">style</span>
+</div>
+<span class="font-metric-sub text-metric-sub text-on-surface font-bold">White-Label</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">התאמת מותג ולוגו מלאה</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-2xs shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">INTEGRATION</span>
+<span class="material-symbols-outlined text-primary text-metric-sub">settings_input_component</span>
+</div>
+<span class="font-metric-sub text-metric-sub text-on-surface font-bold">Native SIP</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">הטמעה תוך דקות ספורות</span>
+</div>
+</div>
+</section>
+<!-- MOBILE ANALYTICS SHOWCASE (DATA:IMAGE:IMAGE_4) -->
+<section class="px-margin py-space-lg flex flex-col gap-space-md">
+<div class="bg-surface-container-low rounded-2xl p-space-md overflow-hidden relative shadow-lg">
+<div class="flex flex-col gap-space-xs mb-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-space-2xs rounded-full bg-primary/10 text-primary w-fit font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-label-md">smartphone</span>
+<span>שליטה ניידת מלאה למנהלי מוקד</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold">
+          מחוונים וטלקומניקציה בכף ידך
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          דוחות חיים, עומסי תורים, פריסת שיחות שעתית וניטור סטטוס נציגי 3CX בכל מקום ובכל רגע ישירות מהנייד.
+        </p>
+</div>
+<!-- Hero Phone Analytics Mockup -->
+<div class="relative w-full rounded-xl overflow-hidden aspect-[16/10] bg-surface-container-lowest flex items-center justify-center">
+<img alt="Dimensions Mobile Analytics for 3CX" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeOMkKvQ7QWVVkrMtpBVRyCjHHV2nD-pdWbcwl97RVV6xVSwK77JTff2HLFkCwXnnQ8PPh5MPyuXf8zn_SrTyoUNRsYqGcUmGqfCt-bIyZJk2cK5LD7H1Pd3ubEGuHjwAkFT3Xc9bvIr3QeazUEABYR0E9hwuUJoP7XJ8SeJsJ4-MgqG8XAgZwCfSL-cI-aY5gw-7qetPOz76uiEMLuGtAVEyTVm_IiZw0GFRa9i58LbvaffQzki79kw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent pointer-events-none"></div>
+<div class="absolute bottom-space-sm right-space-sm left-space-sm flex justify-between items-center text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(78,222,163,0.8)]"></span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">4.2k שיחות בטיפול היום</span>
+</div>
+<span class="font-label-sm text-label-sm font-mono text-primary bg-surface-container-high/80 px-space-xs py-space-2xs rounded">SLA: 92%</span>
+</div>
+</div>
+</div>
+</section>
+<!-- HOW DIMENSIONS EXTENDS 3CX -->
+<section class="px-margin py-space-xl flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-sm text-label-sm text-secondary font-mono tracking-wider">3CX SUPERPOWERS</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface">
+        איך Dimensions משדרגת את 3CX?
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        מרכזיית 3CX מהווה מנוע שיחות יוצא מן הכלל. Dimensions מעניקה לה שכבת אינטליגנציה ודשבורדים חזותיים שחוסכים זמן ומזניקים את שביעות הרצון.
+      </p>
+</div>
+<!-- Feature 1: Live Streaming Wallboard -->
+<div class="bg-surface-container rounded-2xl p-space-md flex flex-col gap-space-sm shadow-sm">
+<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-sm">monitoring</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">לוחות בקרה ו-Wallboards חיים ב-Live Streaming</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        הצגת עומסים, תורים, וזמני המתנה בזמן אמת על גבי מסכי ענק במוקד ובסמארטפון ללא כל שיהוי בשידור.
+      </p>
+<div class="flex items-center gap-space-xs pt-space-2xs text-primary font-label-md text-label-md font-semibold">
+<span>עדכון פעימות קוליות בכל שנייה</span>
+<span class="material-symbols-outlined text-label-md">arrow_left</span>
+</div>
+</div>
+<!-- Feature 2: Agent Deep Analytics -->
+<div class="bg-surface-container rounded-2xl p-space-md flex flex-col gap-space-sm shadow-sm">
+<div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-headline-sm">groups</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">ניתוח עמוק של ביצועי נציגים (Agent Deep Analytics)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        זיהוי מיידי של זמני טיפול ממוצעים (AHT), משך צלצול לפני מענה, שיחות שננטשו על ידי לקוחות ודירוג עובד החודש הדינמי.
+      </p>
+<div class="flex items-center gap-space-xs pt-space-2xs text-secondary font-label-md text-label-md font-semibold">
+<span>מדדי KPI אישיים וקבוצתיים</span>
+<span class="material-symbols-outlined text-label-md">arrow_left</span>
+</div>
+</div>
+<!-- Feature 3: Smart Proactive Alerts -->
+<div class="bg-surface-container rounded-2xl p-space-md flex flex-col gap-space-sm shadow-sm">
+<div class="w-10 h-10 rounded-xl bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-headline-sm">notifications_active</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">התראות חכמות ופרואקטיביות (Real-Time Alerts)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        הודעות התראה אוטומטיות ב-Telegram, ב-Microsoft Teams או ב-SMS כאשר זמן ההמתנה חורג מ-SLA או כשנרשם גל נטישת שיחות.
+      </p>
+<div class="flex items-center gap-space-xs pt-space-2xs text-tertiary font-label-md text-label-md font-semibold">
+<span>אפס הפתעות בזמני עומס חריגים</span>
+<span class="material-symbols-outlined text-label-md">arrow_left</span>
+</div>
+</div>
+<!-- Feature 4: Executive Reports & Historical Trends -->
+<div class="bg-surface-container rounded-2xl p-space-md flex flex-col gap-space-sm shadow-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-bright flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-sm">insights</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">דוחות מנהלים ומגמות היסטוריות</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        הפקת דוחות אוטומטיים יומיים ושבועיים לסיוע בתכנון משמרות נציגים, מניעת צווארי בקבוק והורדה דרסטית של עלויות תפעול המוקד.
+      </p>
+<div class="flex items-center gap-space-xs pt-space-2xs text-primary font-label-md text-label-md font-semibold">
+<span>ייצוא מובנה ל-PDF, Excel ו-API</span>
+<span class="material-symbols-outlined text-label-md">arrow_left</span>
+</div>
+</div>
+</section>
+<!-- LIVE WALLBOARD SHOWCASE (DATA:IMAGE:IMAGE_3) -->
+<section class="px-margin py-space-xl bg-surface-container-low flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-sm text-label-sm text-primary font-mono tracking-wider">LIVE TELEMETRY COCKPIT</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface">
+        תצוגת מסך מנהלים חי (Live Wallboard)
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        מסך הבקרה המלא של Dimensions בחיבור ישיר למרכזיית 3CX. הופך נתונים גולמיים לחוויית תחרות חיובית ושליטה מוחלטת במוקד.
+      </p>
+</div>
+<!-- Interactive Filter Simulation Tabs -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-space-2xs no-scrollbar" id="wallboard-tabs">
+<button class="px-space-md py-space-xs rounded-full bg-primary text-on-primary-fixed font-label-md text-label-md font-bold whitespace-nowrap active-tab">הכל (מוקד ראשי)</button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap">תמיכה טכנית</button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap">מוקד מכירות</button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap">שירות לקוחות</button>
+</div>
+<!-- Wallboard Image Showcase Frame -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden p-space-xs shadow-xl flex flex-col gap-space-sm">
+<div class="relative w-full rounded-xl overflow-hidden aspect-[16/9] bg-surface-container">
+<img alt="Dimensions 3CX Wallboard Live Screen" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida/AEtjO1Vn7YcD8YXZuXUv8Gu7X2Cz56aHAdkhvgSH_wIm2i-PW1Q3Wmq5jhgP92N7A3DszFbg7qveXx0Mkt8e2nvIydY_r5DsgKb0zQUBjRHS6gnv7y_sT2GBaP7m5PrkwCSMaaVhiwPLHbg74vY5liizW7-v5vP6F-jkZgiZ70acbmGe3XXoSVE9_MOvOGYBsjKbV9MhzD5rTSrg6VASyQQtjsWa6BaERCpGfhf1yoU423ikpJ58AUbaT9hPKs39"/>
+</div>
+<!-- Live metrics explanation pills -->
+<div class="p-space-sm flex flex-col gap-space-sm">
+<div class="grid grid-cols-3 gap-space-xs text-center">
+<div class="bg-surface-container p-space-xs rounded-lg flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">זמן צלצול ממוצע</span>
+<span class="font-metric-sub text-metric-sub text-primary font-mono font-bold">00:00:18</span>
+</div>
+<div class="bg-surface-container p-space-xs rounded-lg flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">נענו מול ננטשו</span>
+<span class="font-metric-sub text-metric-sub text-secondary font-mono font-bold">113 / 25</span>
+</div>
+<div class="bg-surface-container p-space-xs rounded-lg flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">עובדת החודש</span>
+<span class="font-metric-sub text-metric-sub text-tertiary font-bold">Jane (40)</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span class="flex items-center gap-space-2xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+            סנכרון ערוצים: 3CX Dedicated &amp; Hosted
+          </span>
+<span class="font-mono text-primary font-semibold">100% Realtime</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3CX PRODUCTS & MODULES ENHANCED -->
+<section class="px-margin py-space-xl flex flex-col gap-space-lg" id="modules-section">
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-sm text-label-sm text-primary font-mono tracking-wider">3CX MODULAR SUITE</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface">
+        מוצרי ושירותי 3CX המורחבים
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        שילוב מהיר של רכיבי Dimensions עם מודולי הליבה של מרכזיית 3CX להרחבה מיידית של הפונקציונליות:
+      </p>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Item 1 -->
+<div class="bg-surface-container rounded-2xl p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-space-xs py-space-2xs rounded">3CX Call Center &amp; Queue</span>
+<span class="material-symbols-outlined text-primary">swap_horiz</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+          Dimensions Live Queue Control &amp; Smart Routing
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          ניתוב שיחות חכם לפי רמת מיומנות הנציג, ניהול תורים בלייב ושינוי הרשאות נציגים דינמי בקליק אחד ללא כניסה לניהול המרכזייה הראשית.
+        </p>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container rounded-2xl p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-space-xs py-space-2xs rounded">3CX CRM Integration</span>
+<span class="material-symbols-outlined text-secondary">sync_alt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+          Omnichannel History &amp; Contextual Screen Pops
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          קפיצת חלונית לקוח מותאמת (Screen Pop) עם היסטוריית פניות מלאה מכלל הערוצים (שיחות, וואטסאפ, צ׳אט) ישירות לתוך כרטיס ה-CRM שלכם.
+        </p>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container rounded-2xl p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-space-xs py-space-2xs rounded">3CX Teams Integration</span>
+<span class="material-symbols-outlined text-tertiary">groups_2</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+          Unified Teams Telephony Wallboard
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          גישור מלא ולוחות נתונים משותפים לנציגים הפועלים מתוך Microsoft Teams המחוברים אל מרכזיית 3CX, כולל סטטוסי זמינות הדדיים.
+        </p>
+</div>
+<!-- Item 4 -->
+<div class="bg-surface-container rounded-2xl p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-space-xs py-space-2xs rounded">3CX Recording &amp; Compliance</span>
+<span class="material-symbols-outlined text-primary">graphic_eq</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+          Dimensions Sentiment Analysis &amp; AI Transcription
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          מנוע תמלול וזיהוי סנטימנט שיחות מתקדם, המסמן באופן אוטומטי שיחות מתוחות או לקוחות שדורשים טיפול מנהל מיידי.
+        </p>
+</div>
+</div>
+</section>
+<!-- PARTNER & RESELLER BENEFITS -->
+<section class="px-margin py-space-xl bg-surface-container-lowest flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-sm text-label-sm text-secondary font-mono tracking-wider">FOR THE CHANNEL ONLY</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface">
+        יתרונות למפיצים ומשווקי 3CX
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Dimensions אינה מתחרה בשותפיה! אנו עובדים במודל ערוצים בלעדי במטרה לחזק את ההצעה העסקית שלכם ללקוחות הקצה.
+      </p>
+</div>
+<div class="grid grid-cols-1 gap-space-sm">
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary/15 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-headline-sm">handshake</span>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">מודל ערוצים בלעדי (Channel-Only)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">ללא תחרות ישירה על לקוחות הקצה שלכם. אנו מקדישים 100% מהמשאבים להצלחת המשווקים.</p>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary/15 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-headline-sm">palette</span>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">מיתוג אישי מלא (White-Label)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">הציעו פורטל אנליטיקה ו-Wallboards עם הלוגו, כתובת הדומיין והצבעים של החברה שלכם.</p>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-tertiary/15 flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-headline-sm">support_agent</span>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">תמיכה טכנית וליווי מלא בהטמעה</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">הכשרה מעשית לצוותי ה-Pre-Sale והתמיכה שלכם, לצד חומרי מכירה ושיווק ייעודיים.</p>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-bright flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-headline-sm">code</span>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">עבודה ישירה מול צוות הפיתוח</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">השפעה ישירה על מפת הדרכים הטכנולוגית (Roadmap) של הפלטפורמה וקבלת פיצ'רים לפי דרישה.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SOCIAL PROOF & TESTIMONIALS -->
+<section class="px-margin py-space-xl flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-sm text-label-sm text-primary font-mono tracking-wider">FIELD PROVEN</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface">
+        הוכחות מהשטח: מה אומרים השותפים?
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        עשרות אלפי נציגים ומאות מפיצי 3CX ברחבי העולם כבר משתמשים במערכת יום-יום:
+      </p>
+</div>
+<!-- Testimonial Carousel Cards -->
+<div class="flex flex-col gap-space-md">
+<!-- Quote 1 -->
+<div class="bg-surface-container-high rounded-2xl p-space-md flex flex-col gap-space-sm relative">
+<span class="material-symbols-outlined text-primary/40 text-metric-display-mobile">format_quote</span>
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+          "Dimensions הוכיחה יכולת מרשימה לתרגם את הצרכים הייחודיים שלנו לתוכנה חדשנית המייעלת את התפעול ומקפיצה את חוויית הלקוח לגבהים חדשים."
+        </p>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">T2k Voice &amp; Data</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">שותף ערוץ מוסמך 3CX</span>
+</div>
+<span class="material-symbols-outlined text-secondary">verified</span>
+</div>
+</div>
+<!-- Quote 2 -->
+<div class="bg-surface-container rounded-2xl p-space-md flex flex-col gap-space-sm">
+<span class="material-symbols-outlined text-primary/40 text-metric-display-mobile">format_quote</span>
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+          "יכולות הדיווח בזמן אמת העניקו להנהלה תובנות מעשיות, ואיפשרו החלטות מבוססות נתונים ששיפרו דרסטית את ביצועי רשת הסניפים שלנו."
+        </p>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">JS Comms</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Channel Partner</span>
+</div>
+<span class="material-symbols-outlined text-secondary">verified</span>
+</div>
+</div>
+<!-- Quote 3 -->
+<div class="bg-surface-container rounded-2xl p-space-md flex flex-col gap-space-sm">
+<span class="material-symbols-outlined text-primary/40 text-metric-display-mobile">format_quote</span>
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+          "היתרון העצום ביותר הוא הדוחות היומיים האוטומטיים. הם מאפשרים לנו לוודא שהמטופלים שלנו אינם ממתינים דקה מיותרת על הקו."
+        </p>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">Chicago VoIP</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Channel Partner</span>
+</div>
+<span class="material-symbols-outlined text-secondary">verified</span>
+</div>
+</div>
+</div>
+</section>
+<!-- RAPID DEPLOYMENT CHECKLIST -->
+<section class="px-margin py-space-lg flex flex-col gap-space-md">
+<div class="bg-surface-container-high rounded-2xl p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">timer</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">הטמעה מלאה תוך פחות מ-24 שעות</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        ללא צורך בחומרה נוספת, ללא השבתת מרכזיית ה-3CX הקיימת, ובחיבור API חלק ומאובטח.
+      </p>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-secondary text-label-md">check_circle</span>
+<span class="font-body-sm text-body-sm font-medium">תאימות מלאה ל-3CX v18 ו-v20 (Dedicated ו-Cloud)</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-secondary text-label-md">check_circle</span>
+<span class="font-body-sm text-body-sm font-medium">תקן אבטחה מחמיר ISO 27001 ו-GDPR Compliant</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-secondary text-label-md">check_circle</span>
+<span class="font-body-sm text-body-sm font-medium">תמיכה מלאה בריבוי שפות: עברית מלאה (RTL) ואנגלית</span>
+</div>
+</div>
+</div>
+</section>
+<!-- BOTTOM CTA & CONTACT FORM -->
+<section class="px-margin py-space-xl bg-surface-container-low flex flex-col gap-space-lg" id="demo-modal">
+<div class="flex flex-col gap-space-2xs text-center items-center">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-space-2xs">
+<span class="material-symbols-outlined text-headline-md">support</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface">
+        התחילו עכשיו עם 3CX + Dimensions
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+        דברו ישירות עם צוות המומחים שלנו ותאמו הדגמת לייב המותאמת למערך התקשורת שלכם.
+      </p>
+</div>
+<!-- Interactive Contact Card -->
+<div class="bg-surface-container rounded-2xl p-space-md flex flex-col gap-space-md shadow-lg">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="contact-name">שם מלא</label>
+<div class="bg-surface-container-lowest rounded-xl p-space-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-on-surface-variant text-label-md">person</span>
+<input class="bg-transparent text-on-surface w-full focus:outline-none font-body-md text-body-md" id="contact-name" placeholder="ישראל ישראלי" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="contact-phone">מספר טלפון נייד</label>
+<div class="bg-surface-container-lowest rounded-xl p-space-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-on-surface-variant text-label-md">call</span>
+<input class="bg-transparent text-on-surface w-full focus:outline-none font-body-md text-body-md font-mono" dir="ltr" id="contact-phone" placeholder="050-1234567" type="tel"/>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="contact-type">סוג ארגון</label>
+<div class="bg-surface-container-lowest rounded-xl p-space-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-on-surface-variant text-label-md">corporate_fare</span>
+<select class="bg-transparent text-on-surface w-full focus:outline-none font-body-md text-body-md" id="contact-type">
+<option class="bg-surface-container text-on-surface" value="reseller">משווק / אינטגרטור של 3CX</option>
+<option class="bg-surface-container text-on-surface" value="callcenter">מוקד שירות ומכירות (End Customer)</option>
+<option class="bg-surface-container text-on-surface" value="telecom">ספק תקשורת / IT מנוהל</option>
+</select>
+</div>
+</div>
+<button class="w-full py-space-md px-space-lg bg-primary-container text-on-primary-fixed rounded-xl font-headline-sm text-headline-sm font-bold shadow-[0_0_16px_rgba(6,182,212,0.3)] active:scale-95 transition-transform flex items-center justify-center gap-space-sm" id="submit-demo-btn">
+<span>שלח בקשת הדגמה ללא התחייבות</span>
+<span class="material-symbols-outlined text-headline-sm">send</span>
+</button>
+<!-- Direct Phone & WhatsApp quick actions -->
+<div class="flex items-center justify-center gap-space-md pt-space-xs">
+<a class="flex items-center gap-space-2xs text-secondary hover:underline font-label-md text-label-md" href="https://wa.me/443332420042" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-label-md">chat</span>
+<span>פנייה ישירה ב-WhatsApp</span>
+</a>
+<span class="text-on-surface-variant">•</span>
+<a class="flex items-center gap-space-2xs text-primary hover:underline font-label-md text-label-md" href="tel:03332420042">
+<span class="material-symbols-outlined text-label-md">phone_in_talk</span>
+<span>שיחת ייעוץ טלפונית</span>
+</a>
+</div>
+</div>
+</section>
+<!-- MICRO-INTERACTIONS SCRIPT -->
+<script>
+    // Tab filtering micro-interaction for Wallboard demo
+    const tabButtons = document.querySelectorAll('#wallboard-tabs button');
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabButtons.forEach(b => {
+          b.className = 'px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap';
+        });
+        btn.className = 'px-space-md py-space-xs rounded-full bg-primary text-on-primary-fixed font-label-md text-label-md font-bold whitespace-nowrap active-tab';
+      });
+    });
+
+    // Simple CTA click feedback
+    const submitBtn = document.getElementById('submit-demo-btn');
+    if (submitBtn) {
+      submitBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        submitBtn.innerHTML = '<span class="material-symbols-outlined text-headline-sm">check_circle</span> <span>הבקשה התקבלה! נציג יחזור תוך שעה</span>';
+        submitBtn.classList.remove('bg-primary-container');
+        submitBtn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+      });
+    }
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-low/95 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.6)]" data-active-classes="text-primary"><div class="flex justify-around items-center h-20 px-space-sm"><a aria-current="page" class="min-w-[44px] min-h-[44px] flex flex-col items-center justify-center gap-space-2xs transition-colors text-primary" data-path="integration-overview" href="#"><span class="material-symbols-outlined text-headline-md">dashboard</span><span class="font-label-sm text-label-sm font-semibold">סקירה</span></a><a class="min-w-[44px] min-h-[44px] flex flex-col items-center justify-center gap-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="telecom-cockpit" href="#"><span class="material-symbols-outlined text-headline-md">monitoring</span><span class="font-label-sm text-label-sm font-semibold">קוקפיט 3CX</span></a><a class="min-w-[44px] min-h-[44px] flex flex-col items-center justify-center gap-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="integration-packages" href="#"><span class="material-symbols-outlined text-headline-md">layers</span><span class="font-label-sm text-label-sm font-semibold">חבילות</span></a><a class="min-w-[44px] min-h-[44px] flex flex-col items-center justify-center gap-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="live-wallboard" href="#"><span class="material-symbols-outlined text-headline-md">grid_view</span><span class="font-label-sm text-label-sm font-semibold">וולבורד</span></a><a class="min-w-[44px] min-h-[44px] flex flex-col items-center justify-center gap-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="book-a-demo" href="#"><span class="material-symbols-outlined text-headline-md">event_available</span><span class="font-label-sm text-label-sm font-semibold">תיאום דמו</span></a></div></nav></body></html>
